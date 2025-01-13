@@ -21,6 +21,7 @@ $\forall D \subseteq \mathbb{M} \times \mathbb{M}: \circ: D \to \mathbb{M}$
 ***
 ## External Links:
 - Группа, моноид, семигруп, магма: https://youtu.be/nFuVB8IIZOA?list=PLq06VUBy616QNhJudwL6fU5VHopWFZ5OC
+- https://en.wikipedia.org/wiki/Magma_(algebra)#Definition
 ***
 Internal Links:
 $\bigtriangleup$ [[Math-Abstract Algebra]]
