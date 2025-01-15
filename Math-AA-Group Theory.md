@@ -1,16 +1,21 @@
 # Group Theory
-## Mathematics/Abstract Algebra/Group Theory:
+## Group Definition:
 - Non-Abelian Group:
-	- $[\mathbb{G},\circ]$:
-		- $\forall a, b, c \in \mathbb{G}: \quad (a \circ b) \circ c = a \circ (b \circ c)$ : Associativity.
-		- $\forall a \in \mathbb{G} \quad \exists \quad e \in \mathbb{G}: \quad a \circ e = e \circ a = a$: Identity element.
+	- Notation: $[\mathbb{G},\circ]$:
+		- [[Math-AA-Semigroup Theory#^5fdebd|Monoid Properties]].
 		- $\forall{a \in \mathbb{G}} \quad \exists \quad  b \in \mathbb{G} :   a \circ b = b \circ a = e$: Inverse Element.
 			- Additive Group: $b = -a$.
 			- Multiplicative Group: $b = a^{-1}$.
+
+> Неабелева группа это моноид с обратным элементом.
+
 - Abelian Group:
-	- $[\mathbb{G},\circ]$:
+	- Notation: $[\mathbb{G},\circ]$:
 		- Non-abelian Group.
 		- $\forall a, b \in \mathbb{G}: \quad a \circ b = b \circ a$: Commutative.
+
+> Абелева группа это неабелева группа со свойством коммутативности.
+
 - Additive Group (always Abelian): $[\mathbb{G}, +]$.
 - Multiplicative Group (Non-Abelian/Abelian):  $[\mathbb{G}, \cdot]$.
 ### Examples:
@@ -25,6 +30,17 @@
 		- $(a \cdot b) \cdot c = a \cdot (b \cdot c)$: Associativity.
 		- $a \cdot 1 = 1 \cdot a = a$: Identity element = 1.
 		- $\forall a \in \mathbb{R}^* \quad \exists \quad a^{-1} \in \mathbb{R}^* : a * a^{-1} = a^{-1} * a = 1$: Inverse Element = $a^{-1}$.
+#  Более сложные алгебраические структуры:
+- Кольцо (добавление умножения и дистрибутивности).
+- Кольцо с единицей (нейтральный элемент для умножения).
+- Поле (обратимость для умножения).
+- Модуль (умножение на скаляры из кольца).
+- Векторное пространство (умножение на скаляры из поля).
+- Ассоциативная алгебра (добавление ассоциативного умножения внутри пространства).
+- Алгебра Ли (антисимметричная операция + тождество Якоби).
+- Алгебра Хопфа (биалгебры + дополнительные симметрии).
+***
+## Miscellaneous:
 ***
 ## Little Dictionary | Словарик:
 - **Abelian | Абелевый**: Sinonyms: Commutative | Коммутативный
@@ -32,17 +48,17 @@
 - **Inverse | Обратный**
 - **Associativity | Ассоциативность**
 - **Commutative | Коммутативность**
-- **Бинарный оператор**: Оператор, прнимающий два операнда и возвращающий один результат.
 - **Additive | Аддитивный**
 - **Multiplicative | Мультипликативный**
 - Variables:
 	- $\mathbb{R}^*$: Множество ненулевых вещественных чисел.
 	- $\mathbb{G}$: Some set. | Какое-то множество.
 - Operators:
-	- $\circ$: Some operator. | Какой-то оператор.
+	- $\circ$: Бинарный оператор/Композиция: Оператор, прнимающий два операнда и возвращающий один результат.
 	- $\forall$: For all | Для всех
 	- $\exists$: Exists | Существует
 	- $:$: Обозначает, что все предыдущие элементы могут совершать следующие действия. Можно использовать словосочетание: "Такой что".
+	- Function Composition | Композиция Функций
 ***
 ## External Links:
 - Группа, моноид, семигруп, магма: https://youtu.be/nFuVB8IIZOA?list=PLq06VUBy616QNhJudwL6fU5VHopWFZ5OC
@@ -51,7 +67,7 @@
 Internal Links:
 $\bigtriangleup$ [[Math-Abstract Algebra]]
 $\bigcirc$
-$\bigtriangledown$ 
+$\bigtriangledown$ Group Category
 ***
 Tags: #Mathematics #AbstractAlgebra #GroupTheory
 ***

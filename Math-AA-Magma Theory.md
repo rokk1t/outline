@@ -1,10 +1,11 @@
 # Magma Theory:
 - Notation: $(\mathbb{M}, \circ)$.
-- Defenition + Property | Свойство:
+- Magma Defenition / Property: ^ec0681
 	- Сlosure Property | Magma Property | Замкнутость:
-		- $\forall {a, b, a \circ b} \in \mathbb{M}$.
-		- $\circ: \mathbb{M} \times \mathbb{M} \to \mathbb{M}$
+		- $\circ: \mathbb{M} \times \mathbb{M} \to \mathbb{M}$.
 			- Ненулевое множество: $\mathbb{M} \neq \emptyset$.
+
+ > Магма это исходный элемент в абстрактной алгебре.
 ## Partial Magma:
 $\forall D \subseteq \mathbb{M} \times \mathbb{M}: \circ: D \to \mathbb{M}$
 ***
@@ -13,11 +14,13 @@ $\forall D \subseteq \mathbb{M} \times \mathbb{M}: \circ: D \to \mathbb{M}$
 ## Little Dictionary:
 - **Magma | Магма**: группоид
 - Замкнутость — это базовое свойство бинарной операции, которое означает, что применение этой операции к любым двум элементам множества всегда возвращает элемент из того же множества.
+	- $\forall {a, b, a \circ b} \in \mathbb{M}$: Ещё одно определение замкнутости.
 - $\circ$: Synonyms: $\cdot$.
 - $\circ$: Бинарный оператор или композиция функций.
 - $\mathbb{M}$: Множество.
 - $a, b, c$: Элементы множества.
-- partial magma / partial groupoid 
+- partial magma / partial groupoid
+- Property | Свойство
 ***
 ## External Links:
 - Группа, моноид, семигруп, магма: https://youtu.be/nFuVB8IIZOA?list=PLq06VUBy616QNhJudwL6fU5VHopWFZ5OC
@@ -26,7 +29,7 @@ $\forall D \subseteq \mathbb{M} \times \mathbb{M}: \circ: D \to \mathbb{M}$
 Internal Links:
 $\bigtriangleup$ [[Math-Abstract Algebra]]
 $\bigcirc$
-$\bigtriangledown$
+$\bigtriangledown$ [[Math-AA-Semigroup Theory]]
 ***
 Tags: #Mathematics #AbstractAlgebra #MagmaTheory #PartialMagma
 ***
