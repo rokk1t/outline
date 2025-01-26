@@ -1,12 +1,24 @@
 # Math-Boolean Algebra-Example: Разрушение Закона Противоречия
-1. 
-- $A \land \neg A \Rightarrow B \quad = \quad true \Rightarrow B \quad = \quad true \Rightarrow true/false(allow)  \quad = \quad true/false (answer)$
-- **If** $A \land \neg A = true$ и $allow = true/false$ (Я разрешаю!/Я запрещаю!),
-	**then** eдинороги существуют/не существуют. ($answer$).
-2. 
-- $A \land \neg A \Rightarrow B \quad = \quad false \Rightarrow B \quad = \quad true \Rightarrow true/false(allow)  \quad = \quad false (answer)$
-- **If** $A \land \neg A = false$ и $allow = true/false$ (Я разрешаю!/Я запрещаю!),
-	**then** eдинороги не существуют. ($answer$).
+1. $\mathbb{A} \to \mathbb{B} = C$
+	- $\mathbb{A} = true = \mathbb{A} \land \neg \mathbb{A}$
+	- $\mathbb{B} = true|false$
+	- $\mathbb{C} = true|false = \text{ImplicationResult}(\mathbb{A}, \mathbb{B})$
+**If**|Если:
+	condition $\mathbb{A} = true$,
+**then**|то:
+	$\mathbb{B} = true|false$.
+**$\mathbb{C}$**: 
+	 $\mathbf{Set}(\mathbb{A}, \mathbb{B}) \to true|false.$
+***
+2. $\mathbb{A} \to \mathbb{B} = true|false$
+	- $\mathbb{A} = \mathbb{A} \land \neg \mathbb{A} = false$
+	- $\mathbb{B} = true|false$
+**If**|Если
+	condition $\mathbb{A} = \mathbb{A} \land \neg \mathbb{A} = false$,
+**then**|то
+	$\mathbb{B} = true|false$.
+**$\mathbb{C}$**: 
+	 $\mathbf{Set}(\mathbb{A}, \mathbb{B}) \to false.$
 ***
 ## Miscellaneous:
 ***
