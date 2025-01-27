@@ -35,7 +35,7 @@
 ## External Links:
 - https://ru.wikipedia.org/wiki/Принцип_взрыва
 - https://ru.wikipedia.org/wiki/Закон_противоречия
-- https://github.com/rokk1t/outline/edit/main/Principle%20of%20explosion.md
+- https://github.com/rokk1t/outline/blob/main/Principle%20of%20explosion.md
 ***
 Internal Links:
 $\bigtriangleup$ [[Math-Boolean Algebra]]
