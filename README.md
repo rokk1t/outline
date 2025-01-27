@@ -7,4 +7,4 @@
 - [Category Theory](https://github.com/rokk1t/outline/blob/main/Math-AA-Category%20Theory.md)
   - [Category Theory Canvas](https://github.com/rokk1t/outline/blob/main/Math-AA-GroupTheory%2BCategoryTheory.canvas) (scheme format for Obsidian)
 ## Boolean Algebra:
-- [Разрушение Закона Противоречия](https://github.com/rokk1t/outline/blob/main/Math-Boolean%20Algebra-Example.md)
+- [Principle of explosion](https://github.com/rokk1t/outline/blob/main/Principle%20of%20explosion.md)
