@@ -1,0 +1,63 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Конспекты</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css">
+<script src="https://cdn.jsdelivr.net/npm/marked@14.1.4/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js"></script>
+<style>
+	body { max-width: 52em; margin: 2em auto; padding: 0 1em; font: 16px/1.6 -apple-system, sans-serif; color: #222; }
+	nav { display: flex; flex-wrap: wrap; gap: .5em 1.5em; margin: 1.5em 0; }
+	pre { overflow: auto; padding: .8em; background: #f4f4f4; border-radius: 4px; }
+	code { background: #f4f4f4; padding: .1em .3em; border-radius: 3px; }
+	pre code { background: none; padding: 0; }
+</style>
+<nav id="nav"></nav>
+<main id="note"></main>
+<script>
+const notes = [{ file: "binary64-standard.md", title: "IEEE-754" }];
+
+function math(text, displayMode) {
+	try {
+		return katex.renderToString(text.replaceAll(String.fromCharCode(0x200b), ""), { displayMode, throwOnError: false });
+	} catch {
+		return text;
+	}
+}
+
+marked.use({
+	breaks: true,
+	renderer: {
+		code(token) {
+			const text = token.text.replace(/<[^>]+>/g, c => c.replace(/[<>&]/g, s => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;" })[s]));
+			return "<pre><code>" + text.replace(/[<>&]/g, s => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;" })[s]) + "</code></pre>\n";
+		},
+	},
+});
+
+function show(note) {
+	fetch(note.file)
+		.then(r => r.text())
+		.then(src => {
+			document.getElementById("note").innerHTML = marked.parse(src.replace(/^---\n[\s\S]*?\n---\n/, ""));
+			renderMathInElement(document.getElementById("note"), {
+				delimiters: [{ left: "$$", right: "$$", display: true }, { left: "$", right: "$", display: false }],
+			});
+			document.title = note.title;
+		});
+}
+
+const nav = document.getElementById("nav");
+for (const note of notes) {
+	const link = document.createElement("a");
+	link.href = "#" + encodeURIComponent(note.file);
+	link.textContent = note.title;
+	nav.appendChild(link);
+}
+window.onhashchange = () => {
+	const note = notes.find(n => n.file === decodeURIComponent(location.hash.slice(1))) || notes[0];
+	show(note);
+};
+window.onhashchange();
+</script>

@@ -1,3 +1,38 @@
+---
+tags:
+- ComputerScience/IEEE754
+- ComputerScience/FloatingPoint
+---
+# IEEE-754 Standard for Floating-Point Arithmetic
+
+Definition: Стандарт представления чисел с плавающей запятой в двоичном виде
+
+- Using:
+	- C/C++ DT
+		- `float`
+		- `double`
+	- Java
+	- Python
+	- Processors
+		- x86
+		- ARM
+
+## Binary interchange formats | ?
+
+- binary16 | half
+	- Total | Всего: 16 b
+	- Sign | Знак: 1 b
+	- Exponent | : 5 b
+	- Explicit significand: 10 b
+- binary32 | single
+	- Total: 32 b
+	- Sign: 1 b
+	- Exponent: 8 b
+	- Explicit significand: 23 b
+	- Precision: 24 b
+	- C, C++: `float`
+- binary64 | double
+
 ### binary64 standard
 
 - Total: 64 b
@@ -52,7 +87,7 @@ The real exponent 0 is encoded as `0b01111111111` | 1023. This simplifies the pr
 - Integer range for recording exact value:
 	- `0..2^53`: range for integers divisible by `2^0`
 		- $\text{Integer Value} = \frac{\text{Integer}}{2^n}$
-			- where n = 0..2^53
+			- where n = 0..53
 	- `2^53..2^54`: range for integers divisible by `2^1`
 	- `2^54..2^55`: range for integers divisible by `2^2`
 	- `2^n..2^(n+1)`: range for integers divisible by `2^(n-52)`
@@ -63,9 +98,9 @@ The real exponent 0 is encoded as `0b01111111111` | 1023. This simplifies the pr
 
 - Rounding:
 	- `3^40 = 12157665459056928801`
-		- `0(+)_10000111111(63)_(1)0101000101110001011010001010010001010010001111111101_(00000100001)`
+		- `0(+)_10000111110(63)_(1)0101000101110001011010001010010001010010001111111101_(00000100001)`
 	- `? = 12157665459056928768`
-		- `0(+)_10000111111(63)_(1)0101000101110001011010001010010001010010001111111101_(00000000000)`
+		- `0(+)_10000111110(63)_(1)0101000101110001011010001010010001010010001111111101_(00000000000)`
 
 Note: min 15 digits of precision are preserved
 
@@ -78,9 +113,26 @@ Note: min 15 digits of precision are preserved
 	- Raw Hexadecimal Integer Value: `0x4020000000000000`
 	- Raw Decimal Integer Value: `4620693217682128896`
 	- Hexadecimal Form ("%a"): `0x1p+3 == 1.0 * 2^3`
-		- Equivalent `0x1e+3 = 1 * 10^3`
+		- Equivalent `1e+3 = 10^3`
 	- Position within Significand–Exponent Range
 	- Evaluation in Base-2 =
 		`(−0b1)^0b0 * 0b​10^(0b10000000010 − 0b01111111111)​ * 0b​1.0000000000000000000000000000000000000000000000000000 =`
 		`(−1)^0 * 2^(1026-1023) * 1.0 =`
 		`= (-1)^Sign * 2^((bias+exponent)-bias) * 1.ExplicitSignificand`
+
+## Other formats
+
+`bfloat16`
+
+## Footer
+
+- Little Dictionary
+	- Explicit significand | Mantissa: Значащая часть числа с плавающей запятой
+	- Implicit Bit: Неявный бит единицы перед двоичной запятой.
+	- Exponent: показатель степени
+	- NaN (Not a Number)
+- External Links
+	- <https://float.exposed/>: Visualisator
+	- <https://www.rapidtables.com/convert/number/binary-to-decimal.html>
+- Internal Links
+	- [[Two's complement]]
