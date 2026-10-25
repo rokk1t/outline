@@ -1,4 +1,4 @@
-# binary64 standard
+### binary64 standard
 
 - Total: 64 b
 	- Sign (of number): 1 b
@@ -47,7 +47,7 @@ The real exponent 0 is encoded as `0b01111111111` | 1023. This simplifies the pr
 - Range controlled by exponent
 - Precision controlled by mantissa
 
-## Integer Value
+#### Integer Value
 
 - Integer range for recording exact value:
 	- `0..2^53`: range for integers divisible by `2^0`
@@ -69,7 +69,7 @@ The real exponent 0 is encoded as `0b01111111111` | 1023. This simplifies the pr
 
 Note: min 15 digits of precision are preserved
 
-# float.exposed
+### float.exposed
 
 - <https://float.exposed/0x4020000000000000>
 	- Value: `8.0`
